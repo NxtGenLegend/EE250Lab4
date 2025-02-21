@@ -14,7 +14,7 @@ def on_connect(client, userdata, flags, rc):
 
 if __name__ == '__main__':
     #get IP address
-    ip_address=socket.gethostbyname(socket.gethostname)
+    ip_address=socket.gethostbyname(socket.gethostname())
     """your code here"""
     #create a client object
     client = mqtt.Client()
