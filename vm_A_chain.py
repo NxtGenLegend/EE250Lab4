@@ -16,7 +16,6 @@ def on_message_ping(client, userdata, msg):
 if __name__ == '__main__':
     client = mqtt.Client()
     client.on_connect = on_connect
-
     client.connect("172.20.10.3", 1883, 60)
-    client.loop_start()
-    time.sleep(2)
+    client.loop_forever()
+    #time.sleep(2)
