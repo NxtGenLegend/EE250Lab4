@@ -5,7 +5,7 @@ def on_connect(client, userdata, flags, rc):
     print("Connected to MQTT Broker")
     client.subscribe("adhishch/pong")
     client.publish("adhishch/ping", "1")
-    client.message_callback_add("adhishch/ping", on_message_ping)
+    client.message_callback_add("adhishch/pong", on_message_ping)
 
 def on_message_ping(client, userdata, msg):
     number = int(msg.payload.decode()) + 1
